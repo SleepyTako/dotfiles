@@ -1,6 +1,6 @@
 [overlay]
 monitor_mode = "primary"
-layer = "top"
+layer = "bottom"
 position = "right"
 full_length = true
 width = 100
