@@ -12,7 +12,7 @@ margin_right = 5
 [visualizer]
 layout = "frame"
 frame_edges = ["left", "right"]
-frame_mirror_mode = "off"
+frame_mirror_mode = "pairs"
 bar_corner_radius = 0
 bars = 100
 bar_width = 10
