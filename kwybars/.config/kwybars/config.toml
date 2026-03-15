@@ -1,6 +1,6 @@
 [overlay]
 monitor_mode = "primary"
-layer = "background"
+layer = "bottom"
 position = "bottom"
 full_length = true
 height = 500
@@ -9,7 +9,7 @@ margin_left = 5
 margin_right = 5
 
 [visualizer]
-layout = "frame"
+layout = "particle"
 bar_corner_radius = 20
 bars = 50
 bar_width = 8
