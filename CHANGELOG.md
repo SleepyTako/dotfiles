@@ -1,6 +1,11 @@
 #  Changelog
 All notable changes to my dotfiles will be listed here, starting at changes since version 0.0.0.
 
+## 0.0.1 (3.14.2026)
+
+### Features
+- Removed Hyprlain dotfiles and returned to original dotfiles
+
 ## 0.0.0 (5.31.2025)
 
 ### Features
