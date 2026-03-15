@@ -1,19 +1,20 @@
 [overlay]
 monitor_mode = "primary"
 layer = "top"
-position = "right"
+position = ["left", "right"]
 full_length = true
-width = 250
+width = 150
 height = 500
 anchor_margin = 5
 margin_left = 5
 margin_right = 5
 
 [visualizer]
-layout = "line"
+layout = "frame"
+frame_mirror_mode = "pairs"
 bar_corner_radius = 0
-bars = 50
-bar_width = 20
+bars = 100
+bar_width = 10
 segmented_bars = true
 segment_length = 15
 segment_gap = 3
