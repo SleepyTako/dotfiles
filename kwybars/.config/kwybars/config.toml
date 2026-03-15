@@ -2,7 +2,6 @@
 monitor_mode = "primary"
 layer = "top"
 position = "right"
-frame_edges = ["left", "right"]
 full_length = true
 width = 150
 height = 500
@@ -12,6 +11,7 @@ margin_right = 5
 
 [visualizer]
 layout = "frame"
+frame_edges = ["left", "right"]
 frame_mirror_mode = "pairs"
 bar_corner_radius = 0
 bars = 100
