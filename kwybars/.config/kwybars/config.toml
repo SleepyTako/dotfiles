@@ -9,10 +9,10 @@ margin_left = 5
 margin_right = 5
 
 [visualizer]
-layout = "floating"
+layout = "line"
 bar_corner_radius = 20
 bars = 50
-bar_width = 8
+bar_width = 15
 gap = 20
 framerate = 60
 color_mode = "gradient"
