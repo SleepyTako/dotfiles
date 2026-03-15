@@ -10,10 +10,10 @@ margin_right = 5
 
 [visualizer]
 layout = "line"
-bar_corner_radius = 20
-bars = 50
-bar_width = 15
-gap = 20
+bar_corner_radius = 5
+bars = 75
+bar_width = 20
+gap = 10
 framerate = 60
 color_mode = "gradient"
 color_rgba = "rgba(175, 198, 255, 0.7)"
