@@ -9,7 +9,7 @@ margin_left = 5
 margin_right = 5
 
 [visualizer]
-layout = "line"
+layout = "particle"
 bar_corner_radius = 0
 bars = 50
 bar_width = 20
