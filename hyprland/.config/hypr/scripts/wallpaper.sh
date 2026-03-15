@@ -3,4 +3,4 @@
 pkill swww-daemon 2>/dev/null
 swww-daemon &
 sleep 1
-swww img "$HOME/.config/backgrounds/miku_drive.gif"
+swww img "$HOME/.config/backgrounds/Miku_drive.gif"
