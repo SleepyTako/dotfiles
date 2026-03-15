@@ -1,6 +1,7 @@
 [overlay]
 monitor_mode = "primary"
 layer = "top"
+position = "right"
 frame_edges = ["left", "right"]
 full_length = true
 width = 150
