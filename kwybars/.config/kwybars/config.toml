@@ -5,11 +5,11 @@ position = "bottom"
 full_length = true
 height = 500
 anchor_margin = 20
-margin_left = 20
-margin_right = 20
+margin_left = 5
+margin_right = 5
 
 [visualizer]
-layout = "line"
+layout = "frame"
 bar_corner_radius = 20
 bars = 50
 bar_width = 8
