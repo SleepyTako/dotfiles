@@ -32,3 +32,6 @@ notify_on_error = true
 notify_cooldown_seconds = 45
 overlay_command = "kwybars-overlay"
 overlay_args = []
+
+theme = "catppuccin-mocha"
+theme_opacity = 0.85
