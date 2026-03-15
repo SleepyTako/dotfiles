@@ -22,7 +22,7 @@ framerate = 60
 color_mode = "gradient"
 color_rgba = "rgba(175, 198, 255, 0.7)"
 color2_rgba = "rgba(191, 198, 220, 0.7)"
-theme = "miku"
+theme = "your-theme.toml"
 theme_opacity = 0.75
 
 # By default daemon is already enabled and configured for you. 
