@@ -1,9 +1,9 @@
 [overlay]
 monitor_mode = "primary"
 layer = "top"
-position = "bottom"
+position = "right"
 full_length = true
-height = 500
+height = 250
 anchor_margin = 20
 margin_left = 5
 margin_right = 5
