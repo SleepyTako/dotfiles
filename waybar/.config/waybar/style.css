@@ -1,162 +1,43 @@
-/* ~/.config/waybar/style.css */
+@import "theme.css";
 
-@import "colors.css";
-
-/*------------------------------------------------------------
- Global Fonts
-------------------------------------------------------------*/
-*{
-  font-family: "MesloGS Nerd Font Mono Bold";
-  font-size: 14px;
-  min-height: 10px;
-  font-weight: bold;
+* {
+	all: initial; /* Reset GTK theme */
+	color: @main-fg;
 }
 
-/*------------------------------------------------------------
- Global bar background
-------------------------------------------------------------*/
+@import "styles/fonts.css";
+@import "styles/modules-center.css";
+@import "styles/modules-left.css";
+@import "styles/modules-right.css";
+@import "styles/states.css";
+
+.module {
+	margin-bottom: -1px;
+}
+
 #waybar {
-    background: transparent;
+	background-color: @outline;
+}
+#waybar > box {
+	margin: 4px;
+	background-color: @main-bg;
 }
 
-/*------------------------------------------------------------
- Group containers (left, center, right)
-------------------------------------------------------------*/
-#waybar .modules-left,
-#waybar .modules-center,
-#waybar .modules-right {
-    /*background: @surface1;*/
-    border-radius: 8px;
-    padding: 4px 8px;
-    margin: 0 6px;
+button {
+	border-radius: 16px;
+	min-width: 16px;
+	padding: 0 10px;
+}
+button:hover {
+	background-color: @hover-bg;
+	color: @hover-fg;
 }
 
-/* Normalize widget spacing inside groups */
-#waybar .modules-left > widget > *,
-#waybar .modules-center > widget > *,
-#waybar .modules-right > widget > * {
-    margin: 0;
+tooltip {
+	border: 2px solid @main-br;
+	border-radius: 10px;
+	background-color: @main-bg;
 }
-
-/*------------------------------------------------------------
- Module sizing & defaults
-------------------------------------------------------------*/
-#waybar #workspaces,
-#waybar #pulseaudio,
-#waybar #taskbar,
-#waybar #cava,
-#waybar #mpris,
-#waybar #clock,
-#waybar #battery,
-#waybar #cpu,
-#waybar #memory,
-#waybar #disk,
-#waybar #temperature,
-#waybar #backlight,
-#waybar #network,
-#waybar #bluetooth,
-#waybar #custom-shutdown {
-  padding: 0 6px;
-  border-bottom: 3px solid @border;
-  color: @foreground;
-  background: @background;
+tooltip > box {
+	padding: 0 6px;
 }
-
-/*------------------------------------------------------------
- Module grouping overrides
-------------------------------------------------------------*/
-/* General Group: Clock → Taskbar */
-#waybar .modules-left > widget > #clock {
-    border-radius: 15px;
-    margin-left: 0px;
-    margin-right: 4px;
-}
-#waybar .modules-left > widget:last-child > #taskbar {
-    border-radius: 15px;
-    margin-right: 16px;
-    margin-left: 4px;
-}
-
-/* Workspace Group: Workspaces */
-#waybar .modules-center > widget > #workspaces {
- border-radius: 15px;   
- margin: 0 16px;
-}
-
-/* Audio Group: MPRIS, Cava, Pulseaudio, Backlight */
-#waybar .modules-right > widget > #mpris {
-    border-radius: 15px 0 0 15px;
-    margin-left: 16px;
-}
-
-#waybar .modules-right > widget > #cava,
-#waybar .modules-right > widget > #pulseaudio {
-    border-radius: 0;
-}
-
-#waybar .modules-right > widget > #backlight {
-    border-radius: 0 15px 15px 0;
-    margin-right: 4px;
-}
-
-/* Hardware Group: CPU → Bluetooth */
-#waybar .modules-right > widget > #cpu {
-    border-radius: 15px 0 0 15px;
-    margin-left: 4px;
-}
-#waybar .modules-right > widget > #memory,
-#waybar .modules-right > widget > #disk,
-#waybar .modules-right > widget > #temperature,
-#waybar .modules-right > widget > #battery,
-#waybar .modules-right > widget > #network {
-    border-radius: 0;
-}
-#waybar .modules-right > widget > #bluetooth {
-    border-radius: 0 15px 15px 0;
-    margin-right: 4px;
-}
-
-/* Power Group: Shutdown */
-#waybar .modules-right > widget > #custom-shutdown {
-    font-size: 18px;
-    border-radius: 11px;
-    margin-left: 4px;
-    margin-right: 0px;
-}
-
-/*------------------------------------------------------------
- Individual module styles
-------------------------------------------------------------*/
-/* General Group: Clock */
-#waybar #clock { color: @success; }
-
-/* Workspace Group: Workspaces */
-#waybar #workspaces button { color: @ghost; }
-#waybar #workspaces button.empty { color: @pellet; }
-#waybar #workspaces button.active { color: @pacman; }
-#waybar #workspaces button.urgent { color: @cherry; }
-
-/* Audio Group: Cava, Pulseaudio, Backlight */
-#waybar #cava { color: @success; }
-#waybar #cava:hover { color: @foreground; background: @accent-coral; border-color: @accent-coral; }
-#waybar #pulseaudio { color: @success; }
-#waybar #backlight { color: @success; }
-
-/* Hardware Group: CPU → Bluetooth */
-#waybar #cpu { color: @success; }
-#waybar #memory { color: @success; }
-#waybar #disk { color: @success; }
-#waybar #temperature { color: @success; }
-#waybar #temperature.critical { color: @critical; }
-#waybar #battery { color: @success; }
-#waybar #battery.warning { color: @warning; }
-#waybar #battery.critical { color: @critical; }
-#waybar #network { color: @success; }
-#waybar #network.connected { color: @success; }
-#waybar #network.disconnected { color: @critical; }
-#waybar #bluetooth { color: @success; }
-#waybar #bluetooth.disabled { color: @critical; }
-#waybar #bluetooth.off { color: @critical; }
-
-/* Power Group: Shutdown */
-#waybar #custom-shutdown { color: @critical; }
