@@ -15,7 +15,7 @@
 		// "on-click-middle":
 		// "on-click-right":
 		// "on-update":
-		"on-scroll-up": "~/.config/waybar/scripts/backlight up",
+		"on-scroll-up": "$HOME/.config/waybar/scripts/backlight up",
 		"on-scroll-down": "~/.config/waybar/scripts/backlight down",
 		// "smooth-scrolling-threshold":
 		// "reverse-scrolling":
