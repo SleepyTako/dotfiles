@@ -1,1 +1,210 @@
+// ~/.config/waybar/config.jsonc
+{
+  "position": "top",
 
+  //==================================================================
+  // Module Positioning (enable/disable modules below as needed)
+  //==================================================================
+  "modules-left": [
+    "clock",
+    //"weather",    // requires weather module/plugin
+    "wlr/taskbar"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "mpris",
+    "cava",
+    "pulseaudio",
+    "backlight",
+    "cpu",
+    "memory",
+    "disk",
+    "temperature",
+    "battery",
+    "network",
+    "bluetooth",
+    "custom/shutdown"
+  ],
+
+  //==================================================================
+  // General: Clock, Taskbar
+  //==================================================================
+  "clock": {
+    "interval": 1,
+    "format": "  {:%A - %B %d, %Y - %H:%M:%S}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  // Weather placeholder (uncomment once installed)
+//  "weather": {
+//    "format": "{icon} {temp}°C",
+//    "tooltip-format": "{location}\n{description}"
+//  },
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 18,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [
+       "Alacritty"
+    ],
+    "app_ids-mapping": {
+      "firefoxdeveloperedition": "firefox-developer-edition"
+    },
+    "rewrite": {
+        "Firefox Web Browser": "Firefox",
+        "Foot Server": "Terminal"
+    }
+},
+
+  //==================================================================
+  // Workspace: Hyprland
+  //==================================================================
+  "hyprland/workspaces": {
+    "persistent-workspaces": {
+      "1": [], "2": [], "3": [], "4": [], "5": []
+    },
+    "format": "{icon}",
+    "tooltip": false,
+    "format-icons": {
+      "empty":   "",
+      "urgent":  "",
+      "default": "󰊠",
+      "active":  "󰮯"
+    }
+  },
+
+  //==================================================================
+  // Music (MPRIS)
+  //==================================================================
+  "mpris": {
+    "format": "{status_icon}",
+    "interval": 1,
+    "dynamic-len": 40,
+    "status-icons": {
+      "playing": "  ⏸",
+      "paused":  "   ▶",
+      "stopped": ""
+    },
+    "ignored-players": ["firefox"]
+  },
+
+  //==================================================================
+  // Audio: Cava (visualizer), Pulseaudio (volume)
+  //==================================================================
+
+  "cava": {
+    "cava_config": "/home/Squeaks/.config/cava/config",
+    "framerate": 240,
+    "autosens": 1,
+    "sensitivity": 5,
+    "bars": 8,
+    "lower_cutoff_freq": 50,
+    "higher_cutoff_freq": 10000,
+    "method": "pulse",
+    "source": "auto",
+    "stereo": false,
+    "reverse": false,
+    "bar_delimiter": 0,
+    "monstercat": true,
+    "waves": true,
+    "noise_reduction": 0.77,
+    "input_delay": 0,
+    "format-icons": ["▁","▂","▃","▄","▅","▆","▇","█"],
+    //"actions": { "on-click-right": "mode" }
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "states": { "High": 80, "Med": 50, "Low": 10, "Off": 0 },
+    "format-muted": " ",
+    "format-icons": { "default": [" "," ","  ","  "] },
+    "on-click": "pavucontrol"
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "interval": 5,
+    "states": {
+      "90%": 90, "80%": 80, "70%": 70, "60%": 60, "50%": 50,
+      "40%": 40, "30%": 30, "20%": 20, "10%": 10, "1%": 0
+    },
+    "format": "{icon}  {percent}%",
+    "format-icons": ["󰹐","󱩎","󱩏","󱩐","󱩑","󱩒","󱩓","󱩔","󱩕","󱩖"],
+    "on-click": "brightnessctl set +5%",
+    "on-click-right": "brightnessctl set 5%",
+    "tooltip-format": "{percent}%"
+  },
+
+  //==================================================================
+  // Hardware: CPU, Memory, Disk, Temperature, Battery, Network, Bluetooth
+  //==================================================================
+  "cpu": {
+    "interval": 15,
+    "format": "  {}%",
+    "max-length": 10
+  },
+  "memory": {
+    "interval": 30,
+    "format": "   {used:0.1f}GiB",
+    "max-length": 10
+  },
+  "disk": {
+    "interval": 30,
+    "format": "  {percentage_used}%",
+    "path": "/"
+  },
+  "temperature": {
+    "format": " {temperatureC}°C",
+    "paths": ["/sys/class/thermal/thermal_zone0/temp"],
+    "critical-threshold": 60,
+    "format-critical": "󰈸 {temperatureC}°C",
+    "interval": 30
+  },
+  "battery": {
+    "states": { "warning": 30, "critical": 15 },
+    "format": "{icon}   {capacity}%",
+    "format-warning": "{icon}   {capacity}%",
+    "format-critical": "{icon}   {capacity}%",
+    "format-charging": "   {capacity}%",
+    "format-alt": "{icon}   {time}",
+    "format-full": "   {capacity}%",
+    "format-icons": ["","","","",""],
+    "tooltip-format": "{time}",
+    "max-length": 25
+  },
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": " ",
+    "format-ethernet": "󰈁 ",
+    "format-linked": "{ifname} (No IP)  ",
+    "format-disconnected": "󰖪 ",
+    "tooltip-format-wifi": "{essid} {signalStrength}%  ",
+    "max-length": 50
+  },
+  "bluetooth": {
+    "controller": "hci0",
+    "format": "󰂯  {status}",
+    "format-on": "󰂯 ",
+    "format-off": "󰂲 ",
+    "format-disabled": "󰂲 ",
+    "format-connected": "󰂱  {num_connections} connected",
+    "format-device-preference": ["Scintillate39"],
+    "tooltip-format": "{controller_alias}\n{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\n{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias} – {device_address}",
+    "on-click": "kitty -e bluetoothctl",
+    "on-click-right": "bash -c 'bluetoothctl connect Scintillate39'",
+    "on-click-middle": "bash -c 'bluetoothctl disconnect Scintillate39'",
+    "interval": 10
+  },
+
+  //==================================================================
+  // Power: Shutdown
+  //==================================================================
+  "custom/shutdown": {
+    "format": "󰐥",
+    "on-click": "poweroff"
+  }
+
+}
