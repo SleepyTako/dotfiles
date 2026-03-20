@@ -23,7 +23,7 @@
 		// "on-scroll-down":
 		// "smooth-scrolling-threshold":
 		// "tooltip":
-		// "tooltip-format":
+		"tooltip-format": "{} updates available",
 		// "escape":
 		// "menu":
 		// "menu-file":
