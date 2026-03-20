@@ -19,10 +19,10 @@
 		// "window-rewrite-default":
 		// "format-window-separator":
 		"workspace-taskbar": {
-			// "enable":
+			"enable": true,
 			// "update-active-window":
 			// "format":
-			// "icon-size":
+			"icon-size": 16
 			// "icon-theme":
 			// "orientation":
 			// "ignore-list":
