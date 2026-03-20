@@ -8,7 +8,7 @@
 		"interval": 3600,
 		// "restart-interval":
 		"signal": 1,
-		"format": "{}",
+		"format": "",
 		// "format-icons":
 		// "rotate":
 		// "align":
@@ -17,13 +17,13 @@
 		"max-length": 4,
 		"on-click": "kitty -e $HOME/.config/waybar/scripts/update",
 		// "on-click-middle":
-		"on-click-right": "pkill -RTMIN+1 waybar"
+		"on-click-right": "pkill -RTMIN+1 waybar",
 		// "on-update":
 		// "on-scroll-up":
 		// "on-scroll-down":
 		// "smooth-scrolling-threshold":
 		// "tooltip":
-		"tooltip-format": "{} updates available",
+		"tooltip-format": "{} updates available"
 		// "escape":
 		// "menu":
 		// "menu-file":
