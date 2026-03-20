@@ -3,7 +3,7 @@
 		"exec": "checkupdates | wc -l",
 		// "exec-if":
 		// "exec-on-event":
-		"hide-empty-text": "0",
+		"hide-empty-text": 0,
 		// "return-type": "json",
 		"interval": 3600,
 		// "restart-interval":
