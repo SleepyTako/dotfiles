@@ -3,7 +3,7 @@
 		// "active-only":
 		// "hide-active":
 		// "all-outputs":
-		"format": "{icon}",
+		"format": "{icon}: {windows}",
 		// "format-icons": {
 		//	"active": "",
 		//	"default": ""
