@@ -8,8 +8,8 @@
 		"interval": 3600,
 		// "restart-interval":
 		"signal": 1,
-		// "format": "{}",
-		"format-icons": "",
+		"format": "",
+		// "format-icons":
 		// "rotate":
 		// "align":
 		// "justify":
