@@ -1,6 +1,6 @@
 {
 	"custom/update": {
-		"exec": "$HOME/.config/waybar/scripts/update",
+		"exec": "checkupdates | wc -l",
 		// "exec-if":
 		// "exec-on-event":
 		// "hide-empty-text":
