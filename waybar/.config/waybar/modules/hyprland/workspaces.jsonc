@@ -17,11 +17,11 @@
 		// "sort-by":
 		// "window-rewrite":
 		// "window-rewrite-default":
-		// "format-window-separator":
+		"format-window-separator": "",
 		"workspace-taskbar": {
 			"enable": true,
 			"update-active-window": true,
-			"format": "{icon}",
+			"format": "{icon} {title:.22}",
 			"icon-size": 16,
 			// "icon-theme": 
 			// "orientation":
