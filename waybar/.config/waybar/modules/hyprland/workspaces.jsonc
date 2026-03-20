@@ -22,7 +22,7 @@
 			"enable": true,
 			// "update-active-window":
 			"format": "{icon} {title:.20}",
-			"icon-size": 4
+			"icon-size": 4,
 			"icon-theme":
 			// "orientation":
 			// "ignore-list":
