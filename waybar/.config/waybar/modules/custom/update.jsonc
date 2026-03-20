@@ -1,6 +1,6 @@
 {
 	"custom/update": {
-		"exec": "$HOME/.config/waybar/scripts/update module",
+		"exec": "$HOME/.config/waybar/scripts/update",
 		// "exec-if":
 		// "exec-on-event":
 		// "hide-empty-text":
