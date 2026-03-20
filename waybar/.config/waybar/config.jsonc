@@ -38,8 +38,8 @@
 		"clock#date",
 		"custom/right_div#4",
 		"network",
-		"custom/update",
 		"bluetooth",
+		"custom/update",
 		"custom/right_div#5"
 	],
 	"modules-right": [
