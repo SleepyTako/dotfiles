@@ -21,8 +21,8 @@
 		"workspace-taskbar": {
 			"enable": true,
 			// "update-active-window":
-			"format": "{icon}",
-			"icon-size": 16
+			"format": "{icon} {title:.20}"",
+			"icon-size": 4
 			// "icon-theme":
 			// "orientation":
 			// "ignore-list":
