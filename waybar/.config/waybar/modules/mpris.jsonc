@@ -12,10 +12,10 @@
 		// "on-click-middle":
 		// "on-click-right":
 		"player-icons": {
-			"default": "󰐊"
+			"default": "󰏤"
 		},
 		"status-icons": {
-			"paused": "󰏤"
+			"paused": "󰐊"
 		},
 		// "artist-len":
 		// "album-len":
