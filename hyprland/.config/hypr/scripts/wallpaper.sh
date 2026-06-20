@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-pkill swww-daemon 2>/dev/null
-swww-daemon &
+pkill awww-daemon 2>/dev/null
+awww-daemon &
 sleep 1
-swww img ~/.config/backgrounds/Miku_drive.gif
+awww img ~/.config/backgrounds/Miku_drive.gif
